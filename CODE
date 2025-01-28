@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Black background -->
+  <rect width="400" height="400" fill="#000"/>
+  
+  <!-- Maze walls -->
+  <path d="M40 40 h320 v320 h-320 v-320" stroke="#2121ff" stroke-width="4" fill="none"/>
+  <path d="M80 80 h240 v240 h-240 v-240" stroke="#2121ff" stroke-width="4" fill="none"/>
+  <path d="M120 120 h160 v160 h-160 v-160" stroke="#2121ff" stroke-width="4" fill="none"/>
+  
+  <!-- Dots with size animation -->
+  <circle cx="60" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.1s"/>
+  </circle>
+  <circle cx="140" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.2s"/>
+  </circle>
+  <circle cx="180" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle cx="220" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+  <circle cx="260" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="300" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.6s"/>
+  </circle>
+  <circle cx="340" cy="60" r="4" fill="#ffffff">
+    <animate attributeName="r" values="4;2;4" dur="0.8s" repeatCount="indefinite" begin="0.7s"/>
+  </circle>
+  
+  <!-- Power pellets -->
+  <circle cx="60" cy="340" r="8" fill="#ffffff">
+    <animate attributeName="r" values="8;6;8" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="340" cy="340" r="8" fill="#ffffff">
+    <animate attributeName="r" values="8;6;8" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Pac-Man with chomping animation -->
+  <path fill="#ffff00">
+    <animate attributeName="d" 
+             values="M200 200 l25 -25 A 35 35 0 1 1 175 175 z;
+                     M200 200 l35 0 A 35 35 0 1 1 165 200 z;
+                     M200 200 l25 -25 A 35 35 0 1 1 175 175 z"
+             dur="0.4s" 
+             repeatCount="indefinite"/>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 20,0; 0,0"
+                      dur="2s"
+                      repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Red ghost (Blinky) with floating movement -->
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-10; 0,0"
+                      dur="1.5s"
+                      repeatCount="indefinite"/>
+    <path d="M280 160 q-20 20 -40 0 q-20 -20 -40 0 v40 q40 20 80 0 v-40" fill="#ff0000"/>
+    <circle cx="260" cy="160" r="4" fill="#ffffff"/>
+    <circle cx="300" cy="160" r="4" fill="#ffffff"/>
+  </g>
+  
+  <!-- Pink ghost (Pinky) with floating movement -->
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 0,-8; 0,0"
+                      dur="1.3s"
+                      repeatCount="indefinite"/>
+    <path d="M160 280 q-20 20 -40 0 q-20 -20 -40 0 v40 q40 20 80 0 v-40" fill="#ffb8ff"/>
+    <circle cx="140" cy="280" r="4" fill="#ffffff"/>
+    <circle cx="180" cy="280" r="4" fill="#ffffff"/>
+  </g>
+  
+  <!-- Score with counting animation -->
+  <text x="40" y="380" fill="#ffffff" font-family="Arial" font-size="14">
+    SCORE: 
+    <animate attributeName="textContent"
+             values="10000;10100;10200;10300"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Lives -->
+  <path d="M300 370 l15 -15 A 21 21 0 1 1 285 355 z" fill="#ffff00"/>
+  <path d="M340 370 l15 -15 A 21 21 0 1 1 325 355 z" fill="#ffff00"/>
+</svg>
